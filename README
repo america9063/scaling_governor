@@ -1,0 +1,3 @@
+Nota Importante: En sistemas modernos, deshabilitar ondemand es a menudo suficiente. Si aún ves powersave o ondemand después del reinicio, puedes forzar el modo performance instalando herramientas adicionales como cpufrequtils y usando comandos como cpufreq-set -g performance.
+
+Al configurar la CPU en modo performance, garantizas que tu potente procesador Intel Xeon Gold 6152 esté siempre listo para manejar la máxima carga de transcodificación, lo cual es esencial para la nitidez (preset=slow/medium) y la estabilidad de tu servicio.
