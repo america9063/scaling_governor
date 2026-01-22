@@ -1,0 +1,20 @@
+🚀 Pasos para Configurar la CPU en Alto Rendimiento
+1. Desactivar el Controlador ondemandEl controlador ondemand intenta escalar la frecuencia de la CPU según la carga, lo cual introduce latencia. Debemos desactivarlo para que la CPU se mantenga a su velocidad base máxima ($\approx 3.7\text{ GHz}$ en tu caso).
+Ejecuta este comando:
+
+Bash
+sudo systemctl disable ondemand
+
+2. Reiniciar el Servidor
+Para que el cambio surta efecto y el sistema operativo establezca el modo de alto rendimiento, debes reiniciar el servidor:
+
+Bash
+sudo reboot
+
+3. Verificar la Configuración (Opcional)
+Después de que el servidor se reinicie, puedes verificar el valor actual del governor de la CPU. Debería mostrar performance para todos los núcleos.
+
+Ejecuta este comando:
+
+Bash
+cat /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
